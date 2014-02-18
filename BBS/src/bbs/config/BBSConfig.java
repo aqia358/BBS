@@ -1,6 +1,9 @@
 package bbs.config;
 
 import bbs.interceptor.AuthInterceptor;
+import bbs.model.Reply;
+import bbs.model.Session;
+import bbs.model.Topic;
 import bbs.model.User;
 
 import com.jfinal.config.Constants;
@@ -16,10 +19,10 @@ import com.jfinal.render.ViewType;
 public class BBSConfig extends JFinalConfig {
 
 	public void configConstant(Constants me) {
-
+		me.setBaseViewPath("/pages");//é…ç½®å…¨éƒ¨æ¨¡æ¿çš„åŸºç¡€è·¯å¾„
 		me.setDevMode(true);
-		me.setViewType(ViewType.JSP);// ÉèÖÃÊÓÍ¼ÀàĞÍÎªJSP
-		me.setUrlParaSeparator("_");// ÉèÖÃURL²ÎÊı·Ö¸ô
+//		me.setViewType(ViewType.JSP);// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½ï¿½ï¿½ÎªJSP
+		me.setUrlParaSeparator("_");// ï¿½ï¿½ï¿½ï¿½URLï¿½ï¿½ï¿½ï¿½Ö¸ï¿½
 
 	}
 
@@ -48,11 +51,14 @@ public class BBSConfig extends JFinalConfig {
 		me.add(cp);
 		ActiveRecordPlugin arp = new ActiveRecordPlugin(cp);
 		me.add(arp);
+		arp.addMapping("reply", Reply.class);
+		arp.addMapping("session", Session.class);
+		arp.addMapping("topic", Topic.class);
 		arp.addMapping("user", User.class);
 	}
 
 	public void configInterceptor(Interceptors me) {
-		me.add(new AuthInterceptor());// Global¼¶±ğÀ¹½ØÆ÷
+		me.add(new AuthInterceptor());// Globalï¿½ï¿½ï¿½ï¿½9ï¿½ï¿½ï¿½ï¿½
 	}
 
 	public void configHandler(Handlers me) {
