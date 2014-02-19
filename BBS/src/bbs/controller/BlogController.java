@@ -1,19 +1,34 @@
 package bbs.controller;
 
-import bbs.model.User;
+import java.io.File;
+import java.io.IOException;
+import java.sql.Timestamp;
+import java.util.Date;
+
+import bbs.config.Util;
+import bbs.model.Topic;
 
 import com.jfinal.core.Controller;
+import com.jfinal.upload.UploadFile;
 
 public class BlogController extends Controller{
 
 	public void index(){
-		int id = getParaToInt(0);
-		System.out.println("blog say hello "+id);
-		renderText("Blog controller index "+id);
+		render("add.html");
 	}
 	
-	public void method() {
-		renderText("Blog controller method");
+	public void save() throws IOException {
+		File ff = new File("");
+		UploadFile f = getFile("img", Util.IMG_URL);
+		Topic topic = getModel(Topic.class);
+		topic.set("img", f.getFile().getName());
+		topic.set("createTime", new Timestamp(new Date().getTime()));
+		topic.save();
+		renderText("success");
+	}
+	
+	public void img() {
+		render("img.html");
 	}
 	
 	public void html() {
@@ -22,11 +37,5 @@ public class BlogController extends Controller{
 	
 	public void test() {
 		renderText("asdf");
-	}
-	public void add() {
-		new User().set("name", "join").set("password", "11111").save();
-		User u = User.dao.findById(1);
-		System.out.println(u.getStr("name"));
-		renderHtml("<a href=''>hello</a>");
 	}
 }

@@ -18,6 +18,6 @@ public class IndexController extends Controller{
 	}
 	
 	public void test() {
-		render("test.html");
+		render("add.html");
 	}
 }
