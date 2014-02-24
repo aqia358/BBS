@@ -2,11 +2,26 @@
 <script
 	src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"
 	type="text/javascript"></script>
-<script src="js/img_upload.js" type="text/javascript"></script>
+<script>
+	var editor;
+	KindEditor.ready(function(K) {
+		editor = K.create('textarea[name="topic.contents"]', {
+			resizeType : 1,
+			allowPreviewEmoticons : false,
+			allowImageUpload : false,
+			items : [ 'fontname', 'fontsize', '|', 'forecolor', 'hilitecolor',
+					'bold', 'italic', 'underline', 'removeformat', '|',
+					'justifyleft', 'justifycenter', 'justifyright',
+					'insertorderedlist', 'insertunorderedlist', '|',
+					'emoticons', 'image', 'link' ]
+		});
+	});
+</script>
+<script src="/BBS/js/img_upload.js" type="text/javascript"></script>
 <script>
 	$(function() {
-		$("#up").uploadPreview({
-			Img : "ImgPr",
+		$("#upImg").uploadPreview({
+			Img : "imgFrame",
 			Width : 120,
 			Height : 120
 		});
@@ -20,7 +35,7 @@
 			alert("摘要不能为空！");
 			return false;
 		}
-		if($("#up").val() == ""){
+		if($("#upImg").val() == ""){
 			alert("封面不能为空！");
 			return false;
 		}
@@ -32,7 +47,7 @@
 	}
 </script>
 
-<form class="form-horizontal" role="form" action="blog/save"
+<form class="form-horizontal" role="form" action="save"
 	method="post" enctype="multipart/form-data" onsubmit="return check();">
 	<div class="form-group">
 		<label for="inputEmail3" class="col-sm-2 control-label">标题</label>
@@ -58,15 +73,18 @@
 		<label for="inputPassword3" class="col-sm-2 control-label">封面</label>
 		<div class="col-sm-8">
 			<div>
-				<img id="ImgPr" width="170" height="120" />
+				<img id="imgFrame" width="170" height="120" />
 			</div>
-			<input type="file" id="up" name="img" />
+			<input type="file" id="upImg" name="img" />
 		</div>
 	</div>
 	<div class="form-group">
 		<label for="inputPassword3" class="col-sm-2 control-label">内容</label>
 		<div class="col-sm-8">
+			<textarea class="form-control" name="topic.contents" style="height:200px;visibility:hidden;"></textarea>
+		<!-- 
 			<textarea class="form-control" rows="10" name="topic.contents" id="contents"></textarea>
+		 -->
 		</div>
 	</div>
 	<div class="form-group">

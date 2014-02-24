@@ -58,7 +58,7 @@ public class BBSConfig extends JFinalConfig {
 	}
 
 	public void configInterceptor(Interceptors me) {
-		me.add(new AuthInterceptor());// Global����9����
+//		me.add(new AuthInterceptor());// Global拦截器 将拦截所有的Action
 	}
 
 	public void configHandler(Handlers me) {

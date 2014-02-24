@@ -1,7 +1,6 @@
 package bbs.config;
 
-import bbs.controller.BlogController;
-import bbs.controller.IndexController;
+import bbs.controller.*;
 
 import com.jfinal.config.Routes;
 
@@ -11,6 +10,7 @@ public class FrontRoutes extends Routes {
 	public void config() {
 		add("/", IndexController.class);
 		add("/blog", BlogController.class);
+		add("/user", UserController.class);
 	}
 
 }

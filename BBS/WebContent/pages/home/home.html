@@ -1,39 +1,381 @@
 <#include "../base.html"> <@html title="FreeMarker 测试">
-<a class="btn btn-info">test helloword</a>
-<form class="form-horizontal" role="form">
-	<div class="form-group">
-		<label for="inputEmail3" class="col-sm-2 control-label">标题</label>
-		<div class="col-sm-8">
-			<input type="text" class="form-control" name="title"
-				placeholder="标题">
+<div class="browserUpdate_mod hidden">
+	<div class="txt">
+		您的古董级IE浏览器可能会遇到兼容问题，强烈建议您升级为更先进的浏览器以获得“腾讯大家”的最佳体验&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+			href="http://www.google.com/intl/zh-CN/chrome/browser/"
+			target="_blank">马上升级&gt;&gt;</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+			class="closeBox"><a href="#" target="_blank" title="关闭"
+			alt="关闭">X</a></span>
+	</div>
+</div>
+<div class="layoutA layoutA_C clear">
+
+	<div class="top_mod">
+		<div class="logo_mod" title="大家" alt="大家">
+			<a
+				boss="{id:1220, sBiz:'dajia_web', name:'event_logo', sBak1:'home', sBak2:'lhlliang'}"
+				href="img/logo.png">大家3243</a>
+		</div>
+		<!-- Logo 
+		<div class="">
+			<img height="53px" width="53px" alt="" src="img/logo.png" class="">
+		</div>
+		-->
+
+		<!-- Nav -->
+		<div class="topBar_mod">
+			<a href="http://dajia.qq.com/home"
+				boss="{id:1220, sBiz:'dajia_web', name:'nav_home', sBak1:'home', sBak2:'lhlliang'}">首页</a><a
+				class="myRss" href="http://dajia.qq.com/subscription"
+				boss="{id:1220, sBiz:'dajia_web', name:'nav_sub', sBak1:'home', sBak2:'lhlliang'}">我的订阅</a><a
+				class="djLogOut"
+				href="http://t.qq.com/logout.php?url=http://dajia.qq.com/home"
+				boss="{id:1220, sBiz:'dajia_web', name:'nav_logout', sBak1:'home', sBak2:'lhlliang'}">退出</a><a
+				href="http://www.qq.com/?pgv_ref=dajia" class="clearBor"
+				target="_blank">腾讯网</a>
 		</div>
 	</div>
-	<div class="form-group">
-		<label for="inputPassword3" class="col-sm-2 control-label">副标题</label>
-		<div class="col-sm-8">
-			<input type=""text"" class="form-control" name="subtitle"
-				plac60eholder="副标题">
-		</div>
-	</div>
-	<div class="form-group">
-		<label for="inputPassword3" class="col-sm-2 control-label">摘要</label>
-		<div class="col-sm-8">
-			<textarea class="form-control" name="abstract"
-				placeholder="摘要"></textarea>
-		</div>
-	</div>	
-	<div class="form-group">
-		<div class="col-sm-offset-2 col-sm-8">
-			<div class="checkbox">
-				<label> <input type="checkbox"> Remember me
-				</label>
+
+	<!--Left Side-->
+	<div class="left">
+		<div class="authorBox_mod">
+			<h2>今日推荐作家</h2>
+			<div class="boxA">
+				<div class="list clear">
+					<ul class="clear">
+						<li><div class="pt">
+								<img width="60" height="85"
+									src="http://img1.gtimg.com/microblog/pics/hv1/224/158/1519/98813489.jpg" />
+								<h2>
+									<a href="http://dajia.qq.com/user/zhangfacai#af"
+										target="_blank"
+										boss="{id:1220, sBiz:'dajia_web', name:'left_recmd_user', sBak1:'home', sBak2:'lhlliang'}">张发财</a>
+								</h2>
+								<p title="设计师，历史专栏作家。">设计师，历史专栏作家。</p>
+								<h3>
+									<a href="http://dajia.qq.com/blog/363679020386595"
+										target="_blank" alt="鸦片烟枪"
+										boss="{id:1220, sBiz:'dajia_web', name:'left_recmd_relate_blog', sBak1:'home', sBak2:'lhlliang'}">鸦片烟枪</a>
+								</h3>
+							</div></li>
+						<li class="liA"><div class="pt">
+								<img width="60" height="85"
+									src="http://img1.gtimg.com/microblog/pics/hv1/222/158/1519/98813487.jpg" />
+								<h2>
+									<a href="http://dajia.qq.com/user/suxiaohe#af" target="_blank"
+										boss="{id:1220, sBiz:'dajia_web', name:'left_recmd_user', sBak1:'home', sBak2:'lhlliang'}">苏小和</a>
+								</h2>
+								<p title="财经作家，独立书评人。">财经作家，独立书评人。</p>
+								<h3>
+									<a href="http://dajia.qq.com/blog/365880115840841"
+										target="_blank" alt="性欲到底有多么迷人"
+										boss="{id:1220, sBiz:'dajia_web', name:'left_recmd_relate_blog', sBak1:'home', sBak2:'lhlliang'}">性欲到底有多么迷人</a>
+								</h3>
+							</div></li>
+					</ul>
+				</div>
+				<div class="more">
+					<a target="_blank" href="http://dajia.qq.com/rank"
+						boss="{id:1220, sBiz:'dajia_web', name:'left_recmd_rank', sBak1:'home', sBak2:'lhlliang'}">查看全部作者</a>
+					<span class="jtRight"></span>
+				</div>
+			</div>
+
+			<div class="boxB clear">
+				<div class="list">
+					<ul class="clear">
+						<li><div class="pt">
+								<img width="60" height="85"
+									src="http://img1.gtimg.com/microblog/pics/hv1/224/158/1519/98813489.jpg" />
+								<h2>
+									<a href="http://dajia.qq.com/user/zhangfacai#af"
+										target="_blank"
+										boss="{id:1220, sBiz:'dajia_web', name:'left_recmd_user', sBak1:'home', sBak2:'lhlliang'}">张发财</a>
+								</h2>
+								<p title="设计师，历史专栏作家。">设计师，历史专栏作家。</p>
+								<h3>
+									<a href="http://dajia.qq.com/blog/363679020386595"
+										target="_blank" alt="鸦片烟枪"
+										boss="{id:1220, sBiz:'dajia_web', name:'left_recmd_relate_blog', sBak1:'home', sBak2:'lhlliang'}">鸦片烟枪</a>
+								</h3>
+							</div></li>
+						<li class="liA"><div class="pt">
+								<img width="60" height="85"
+									src="http://img1.gtimg.com/microblog/pics/hv1/222/158/1519/98813487.jpg" />
+								<h2>
+									<a href="http://dajia.qq.com/user/suxiaohe#af" target="_blank"
+										boss="{id:1220, sBiz:'dajia_web', name:'left_recmd_user', sBak1:'home', sBak2:'lhlliang'}">苏小和</a>
+								</h2>
+								<p title="财经作家，独立书评人。">财经作家，独立书评人。</p>
+								<h3>
+									<a href="http://dajia.qq.com/blog/365880115840841"
+										target="_blank" alt="性欲到底有多么迷人"
+										boss="{id:1220, sBiz:'dajia_web', name:'left_recmd_relate_blog', sBak1:'home', sBak2:'lhlliang'}">性欲到底有多么迷人</a>
+								</h3>
+							</div></li>
+						<li class="liB"><div class="pt">
+								<img width="60" height="85"
+									src="http://img1.gtimg.com/microblog/pics/hv1/221/158/1519/98813486.jpg" />
+								<h2>
+									<a href="http://dajia.qq.com/user/tufeiranyunfei#af"
+										target="_blank"
+										boss="{id:1220, sBiz:'dajia_web', name:'left_recmd_user', sBak1:'home', sBak2:'lhlliang'}">冉云飞</a>
+								</h2>
+								<p title="作家，任职于《四川文学》">作家，任职于《四川文学》</p>
+								<h3>
+									<a href="http://dajia.qq.com/blog/382532123449383"
+										target="_blank" alt="民国NGO史上的失踪者"
+										boss="{id:1220, sBiz:'dajia_web', name:'left_recmd_relate_blog', sBak1:'home', sBak2:'lhlliang'}">民国NGO史上的失踪者</a>
+								</h3>
+							</div></li>
+						<li class="liC"><div class="pt">
+								<img width="60" height="85"
+									src="http://img1.gtimg.com/microblog/pics/hv1/220/158/1519/98813485.jpg" />
+								<h2>
+									<a href="http://dajia.qq.com/user/henmeng#af" target="_blank"
+										boss="{id:1220, sBiz:'dajia_web', name:'left_recmd_user', sBak1:'home', sBak2:'lhlliang'}">毛利</a>
+								</h2>
+								<p title="两性情感专栏作者。">两性情感专栏作者。</p>
+								<h3>
+									<a href="http://dajia.qq.com/blog/368575118922175"
+										target="_blank" alt="少壮不努力，老大被逼婚"
+										boss="{id:1220, sBiz:'dajia_web', name:'left_recmd_relate_blog', sBak1:'home', sBak2:'lhlliang'}">少壮不努力，老大被逼婚</a>
+								</h3>
+							</div></li>
+						<li><div class="pt">
+								<img width="60" height="85"
+									src="http://img1.gtimg.com/microblog/pics/hv1/219/158/1519/98813484.jpg" />
+								<h2>
+									<a href="http://dajia.qq.com/user/liuwaitong#af"
+										target="_blank"
+										boss="{id:1220, sBiz:'dajia_web', name:'left_recmd_user', sBak1:'home', sBak2:'lhlliang'}">廖伟棠</a>
+								</h2>
+								<p title="香港作家，自由撰稿人。">香港作家，自由撰稿人。</p>
+								<h3>
+									<a href="http://dajia.qq.com/blog/363050127806830"
+										target="_blank" alt="炸裂不了的中国现实"
+										boss="{id:1220, sBiz:'dajia_web', name:'left_recmd_relate_blog', sBak1:'home', sBak2:'lhlliang'}">炸裂不了的中国现实</a>
+								</h3>
+							</div></li>
+						<li><div class="pt">
+								<img width="60" height="85"
+									src="http://img1.gtimg.com/microblog/pics/hv1/218/158/1519/98813483.jpg" />
+								<h2>
+									<a href="http://dajia.qq.com/user/guonong88#af" target="_blank"
+										boss="{id:1220, sBiz:'dajia_web', name:'left_recmd_user', sBak1:'home', sBak2:'lhlliang'}">高昱</a>
+								</h2>
+								<p title="财新传媒编委，原《商务周刊》主编。">财新传媒编委，原《商务周刊》主编。</p>
+								<h3>
+									<a href="http://dajia.qq.com/blog/387049006147695"
+										target="_blank" alt="美国人眼中的中日关系"
+										boss="{id:1220, sBiz:'dajia_web', name:'left_recmd_relate_blog', sBak1:'home', sBak2:'lhlliang'}">美国人眼中的中日关系</a>
+								</h3>
+							</div></li>
+						<li><div class="pt">
+								<img width="60" height="85"
+									src="http://img1.gtimg.com/microblog/pics/hv1/176/158/1519/98813441.jpg" />
+								<h2>
+									<a href="http://dajia.qq.com/user/welgume#af" target="_blank"
+										boss="{id:1220, sBiz:'dajia_web', name:'left_recmd_user', sBak1:'home', sBak2:'lhlliang'}">傅蔚冈</a>
+								</h2>
+								<p title="专栏作者，上海金融与法律研究院研究员。">专栏作者，上海金融与法律研究院研究员。</p>
+								<h3>
+									<a href="http://dajia.qq.com/blog/381635076829754"
+										target="_blank" alt="把钱给银行，还是给理财宝们？"
+										boss="{id:1220, sBiz:'dajia_web', name:'left_recmd_relate_blog', sBak1:'home', sBak2:'lhlliang'}">把钱给银行，还是给理财宝们？</a>
+								</h3>
+							</div></li>
+						<li><div class="pt">
+								<img width="60" height="85"
+									src="http://img1.gtimg.com/microblog/pics/hv1/90/158/1519/98813355.jpg" />
+								<h2>
+									<a href="http://dajia.qq.com/user/alicerun8#af" target="_blank"
+										boss="{id:1220, sBiz:'dajia_web', name:'left_recmd_user', sBak1:'home', sBak2:'lhlliang'}">陈念萱</a>
+								</h2>
+								<p title="台湾知名作家、影评人。">台湾知名作家、影评人。</p>
+								<h3>
+									<a href="http://dajia.qq.com/blog/359075023000223"
+										target="_blank" alt="信仰初体验"
+										boss="{id:1220, sBiz:'dajia_web', name:'left_recmd_relate_blog', sBak1:'home', sBak2:'lhlliang'}">信仰初体验</a>
+								</h3>
+							</div></li>
+						<li><div class="pt">
+								<img width="60" height="85"
+									src="http://img1.gtimg.com/microblog/pics/hv1/17/158/1519/98813282.jpg" />
+								<h2>
+									<a href="http://dajia.qq.com/user/chenfang#af" target="_blank"
+										boss="{id:1220, sBiz:'dajia_web', name:'left_recmd_user', sBak1:'home', sBak2:'lhlliang'}">陈方</a>
+								</h2>
+								<p title="《燕赵都市报》评论部主任">《燕赵都市报》评论部主任</p>
+								<h3>
+									<a href="http://dajia.qq.com/blog/387115030391268"
+										target="_blank" alt="当政府大院还不是衙门时"
+										boss="{id:1220, sBiz:'dajia_web', name:'left_recmd_relate_blog', sBak1:'home', sBak2:'lhlliang'}">当政府大院还不是衙门时</a>
+								</h3>
+							</div></li>
+						<li><div class="pt">
+								<img width="60" height="85"
+									src="http://img1.gtimg.com/microblog/pics/hv1/246/157/1519/98813256.jpg" />
+								<h2>
+									<a href="http://dajia.qq.com/user/chaiziwen#af" target="_blank"
+										boss="{id:1220, sBiz:'dajia_web', name:'left_recmd_user', sBak1:'home', sBak2:'lhlliang'}">柴子文</a>
+								</h2>
+								<p title="专栏作家，文化评论人。">专栏作家，文化评论人。</p>
+								<h3>
+									<a href="http://dajia.qq.com/blog/278356053800209"
+										target="_blank" alt="香港，现代奴隶之都？(上)"
+										boss="{id:1220, sBiz:'dajia_web', name:'left_recmd_relate_blog', sBak1:'home', sBak2:'lhlliang'}">香港，现代奴隶之都？(上)</a>
+								</h3>
+							</div></li>
+					</ul>
+				</div>
+				<div class="topJt prev" style="display: none;">
+					<a href="#" target="_blank"
+						boss="{id:1220, sBiz:'dajia_web', name:'left_recmd_up', sBak1:'home', sBak2:'lhlliang'}">向上</a>
+				</div>
+				<div class="bottomJt next" style="display: none;">
+					<a href="#" target="_blank"
+						boss="{id:1220, sBiz:'dajia_web', name:'left_recmd_down', sBak1:'home', sBak2:'lhlliang'}">向下</a>
+				</div>
+				<div class="page" style="display: none"></div>
 			</div>
 		</div>
 	</div>
-	<div class="form-group">
-		<div class="col-sm-offset-2 col-sm-8">
-			<button type="submit" class="btn btn-default">提交</button>
+	<!--Left-End-->
+
+	<!--Right Side-->
+	<div class="right">
+		<div class="search_mod searchBoxA">
+			<form class="searchBox" method="get"
+				action="http://dajia.qq.com/search">
+				<div class="l">
+					<label for="searchDajia" style="display: block">搜索您想找的作者或者文章</label>
+					<input type="text" id="searchDajia" maxlength="50" name="wd"
+						autocomplete="off" class="inputTxtNew"
+						onfocus="UI.hide(UI.prev(this));"
+						onblur="if(!this.value){UI.show(UI.prev(this))}">
+				</div>
+				<span class="searchBtn" title="搜索" alt="搜索"> <input
+					type="submit" class="inputBtn"
+					boss="{id:1220, sBiz:'dajia_web', name:'right_bar_search', sBak1:'', sBak2:''}"
+					value="">
+				</span>
+			</form>
 		</div>
+
+		<div class="articleList_mod">
+			<div class="title">
+				<h2 class="clear">
+					<strong class="menu"> <a href="http://dajia.qq.com/home"
+						boss="{id:1220, sBiz:'dajia_web', name:'right_bar_home', sBak1:'home', sBak2:'lhlliang'}">文章<span
+							class="jtDown"></span></a>
+					</strong> <strong> <a href="http://dajia.qq.com/column"
+						boss="{id:1220, sBiz:'dajia_web', name:'right_bar_column', sBak1:'home', sBak2:'lhlliang'}">谈资</a>
+					</strong> <strong> <a href="http://dajia.qq.com/rank"
+						boss="{id:1220, sBiz:'dajia_web', name:'right_bar_rank', sBak1:'home', sBak2:'lhlliang'}">作者</a>
+					</strong>
+				</h2>
+			</div>
+			<div class="nav clear hidden" cur="0">
+				<ul>
+					<li param='{type: 1}' class="now"><a href="#" target="_blank"
+						boss="{id:1220, sBiz:'dajia_web', name:'right_bar_home', sBak1:'home', sBak2:'lhlliang'}">全部</a></li>
+					<li param='{type: "3", category: "11"}'><a href="#"
+						target="_blank"
+						boss="{id:1220, sBiz:'dajia_web', name:'right_bar_event', sBak1:'home', sBak2:'lhlliang'}">时事</a></li>
+					<li param='{type: "3", category: "12"}'><a href="#"
+						target="_blank"
+						boss="{id:1220, sBiz:'dajia_web', name:'right_bar_ideology', sBak1:'home', sBak2:'lhlliang'}">思想</a></li>
+					<li param='{type: "3", category: "13"}'><a href="#"
+						target="_blank"
+						boss="{id:1220, sBiz:'dajia_web', name:'right_bar_wealth', sBak1:'home', sBak2:'lhlliang'}">财富</a></li>
+					<li param='{type: "3", category: "14"}'><a href="#"
+						target="_blank"
+						boss="{id:1220, sBiz:'dajia_web', name:'right_bar_life', sBak1:'home', sBak2:'lhlliang'}">生活</a></li>
+					<li param='{type: "3", category: "15"}'><a href="#"
+						target="_blank"
+						boss="{id:1220, sBiz:'dajia_web', name:'right_bar_literature', sBak1:'home', sBak2:'lhlliang'}">文艺</a></li>
+					<li param='{type: "3", category: "16"}' class="clearBor"><a
+						href="#" target="_blank"
+						boss="{id:1220, sBiz:'dajia_web', name:'right_bar_emotion', sBak1:'home', sBak2:'lhlliang'}">情感</a></li>
+				</ul>
+			</div>
+			<div class="focusImg">
+				<#list topics as topic>
+				<#list users as user>
+				<#if (topic_index == user_index) && (user_index = 0)>
+					<a href="http://dajia.qq.com/blog/382659105002691" target="_blank"
+						boss="{id:1220, sBiz:'dajia_web', name:'right_focus', sBak1:'home', sBak2:'lhlliang'}"><img
+						src="/upload/${topic.img}" />
+						<h2>${topic.title}</h2>
+						<h3>作者：${user.name}</h3></a>
+				</#if>
+				</#list>
+				</#list>					
+			</div>
+			<div class="teamList tj">
+				<div id="lightBlogList">
+					<#list topics as topic>
+					<#list users as user>
+					<#if (topic_index == user_index) && (user_index > 0)>
+					<div class="item" rel="365287040577551" ret=1392600871>
+						<div class="pt">
+							<div class="txt clear">
+								<h2 class="clear">
+									<a href="http://dajia.qq.com/blog/365287040577551"
+										target="_blank"
+										boss="{id:1220, sBiz:'dajia_web', name:'right_list_title', sBak1:'home', sBak2:'lhlliang'}">${topic.title}</a>
+								</h2>
+								<#if topic.subtitle != "-1">
+								<h3>——${topic.subtitle}</h3>
+								</#if>
+								<div class="pic">
+									<img width="192" src="/upload/${topic.img}" />
+								</div>
+								<div class="con haveImg">
+									<p>${topic.abstract}</p>
+									<div class="data">
+										<span class="author"><a
+											href="http://dajia.qq.com/user/chenjibing#af" target="_blank"
+											boss="{id:1220, sBiz:'dajia_web', name:'right_list_user', sBak1:'home', sBak2:'lhlliang'}">${user.name}</a></span><span
+											class="time">${topic.createTime}</span><span class="read">阅读(<span
+											class="num">${topic.clickCount})</span></span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					</#if>
+					</#list>
+					</#list>
+				</div>
+			</div>
+		</div>
+		<div class="pageMore_mod" style="display: none;">
+			<a
+				boss="{id:1220, sBiz:'dajia_web', name:'event_more', sBak1:'home', sBak2:'lhlliang'}"
+				href="#" class="_down"
+				onclick='MI.Light.getMore(this, "lightBlogList",  MI.category.data, {call: function(o, cache) { var list = $$(cache, ".item"); UI.each(list, function(o) { addEvent(o,192); }); }}); return false;'><span
+				class="jh"></span>更多↓</a>
+		</div>
+		<div class="footer_mod">
+			<p>
+				<a target="_blank" href="http://dajia.qq.com/">首页</a>| <a
+					target="_blank" href="http://www.qq.com/">腾讯网</a>| <a
+					target="_blank" href="http://t.qq.com/">腾讯微博</a>| <a
+					target="_blank" href="http://v.qq.com/">腾讯视频</a>| <a
+					target="_blank" href="http://dajia.qq.com/rank">全部作者</a><br />
+				Copyright&nbsp;&copy;&nbsp;1998-2013&nbsp;Tencent.All&nbsp;Rights&nbsp;Reserved<br />
+				腾讯出品
+			</p>
+		</div>
+
 	</div>
-</form>
+	<!--Right-End-->
+</div>
+
+<!--Footer-->
+<div class="topBtn_mod _hidden">
+	<a id="topBtn" href="#" title="回到顶部" alt="回到顶部">向上</a>
+</div>
 </@html>

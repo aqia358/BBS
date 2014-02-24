@@ -1,0 +1,588 @@
+<#macro html title charset="UTF-8" lang="zh-CN"> 
+ <html> 
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+  <meta http-equiv="Content-Language" content="${lang}"/> 
+  <title>${title}</title> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="viewport"
+	content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no" />
+<!--[if IE 8]><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" /><![endif]-->
+<link href="http://mat1.gtimg.com/www/mb/css/light/style_140213.css"
+	type="text/css" rel="stylesheet">
+<!--link href="http://mat1.gtimg.com/www/mb/css/light_v2/style.css" type="text/css" rel="stylesheet"-->
+<link rel="shortcut icon"
+	href="http://mat1.gtimg.com/www/mb/images/light/favicon.ico" />
+<script type="text/javascript">
+	window.device = "pc";
+	if (!window._MIRun) {
+		_MIRun = [];
+		MIRun = function(o) {
+			_MIRun.push(o)
+		}
+	}
+	MILoad = function(b) {
+		var a = document.createElement('script');
+		a.setAttribute('type', 'text/javascript');
+		a.setAttribute('charset', 'utf-8');
+		a.setAttribute('src', b);
+		document.getElementsByTagName('head')[0].appendChild(a)
+	};
+	window.LoadImg = function(id, size, showLong) {
+		var content = document.getElementById(id);
+		if (!content) {
+			return false;
+		}
+		var imgs = content.getElementsByTagName('img'), img, i, len;
+		for (i = 0, len = imgs.length; i < len; i++) {
+			img = imgs[i];
+			img.onload = function(e) {
+				var e = window.event || e || {}, el = e.target || e.srcElement;
+				resizeImg(el, size, showLong);
+			}
+			if (img.complete) {
+				resizeImg(img, size, showLong);
+			}
+		}
+	}
+	window.resizeImg = function(el, size, showLong) {
+		var next;
+		if (!showLong && el.height > el.width) {
+			el.style.display = 'none';
+			next = el.parentNode.nextSibling;
+			next.className = next.className.replace(/\bhaveImg\b/, '').replace(
+					/\s$/, '');
+		} else {
+			el.width = el.width > size ? size : el.width;
+		}
+	}
+</script>
+    
+    
+    
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js"></script>
+        <script src="http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+ </head> 
+ <body> 
+    <#nested> 
+ </body> 
+ <script type="text/javascript">
+	LoadImg("lightBlogList", 192);//MILoad('https://ui.ptlogin2.qq.com/js/ptloginout.js');
+	MILoad('http://www.qq.com/mb/mat1/mb/js/mi.api.js');
+	MIRun(function() {
+		window.$ = UI.G;
+		window.$$ = UI.GC;
+		MI.user = {
+			"account" : "lhlliang",
+			"name" : "\u5218\u7ea2\u4eae",
+			"chName" : "lhlliang",
+			"flag" : {
+				"govCert" : 0,
+				"passCert" : 1
+			},
+			"pic" : "http:\/\/t3.qlogo.cn\/mbloghead\/7bbcbf6a2cb51ef9b362\/50",
+			"fun" : {
+				"openQuickLogin" : 0,
+				"widgetFloat" : 1,
+				"wideStyle" : 1,
+				"newAdmin" : 1,
+				"shortcuts" : 1,
+				"wideLabHeaderFloat" : 1,
+				"wideLibCloseTip" : 1,
+				"wideGuide" : 1,
+				"search" : 1,
+				"favGroup" : 1,
+				"report" : 1,
+				"autoPic" : 1,
+				"hasThirdAppShield" : 1,
+				"followList" : 0,
+				"goTop" : 0,
+				"showGetAnother" : 1,
+				"isNewSidebar" : 1,
+				"newRelay2" : 1,
+				"note" : 1,
+				"chat" : 1,
+				"app" : 1,
+				"msgBox" : 1,
+				"noti" : 1,
+				"messageShare" : 1,
+				"notIframe" : 1,
+				"viewOriginal" : 0,
+				"followTips" : 1,
+				"selfVideo" : 1,
+				"autoMoreContinue" : 1,
+				"atShield" : 0,
+				"notEmpty" : 0,
+				"atAgg" : 0,
+				"feedSpecial" : 1,
+				"apiMove" : 1,
+				"msgOpenPage" : 1,
+				"reportRead" : 1,
+				"polyNotice" : 1,
+				"level" : 3,
+				"looseMar" : 0,
+				"widgetAdmin" : 1,
+				"newvote" : 1,
+				"newAppDrop" : 1,
+				"newPicUpload" : 1,
+				"rtPicPub" : 1,
+				"hasbrace" : 1,
+				"readTimes" : 1,
+				"showBotAd" : 0,
+				"hasLike" : 1,
+				"youdaoShare" : 1,
+				"operFace" : 1,
+				"picCode" : 1,
+				"fromIcon" : 1,
+				"newMultiPicFun" : 1,
+				"hasLongtxtBlog" : 1,
+				"newTalkBoxFun" : 1,
+				"Vip" : 1,
+				"isMember" : 1,
+				"relayComt" : 1,
+				"richcombination" : 0,
+				"usedExpose" : 0,
+				"hasVipTheme" : 1,
+				"hasViewGuide" : 0
+			},
+			"medal" : [ 4, 3 ],
+			"atType" : 4,
+			"uin" : "1576f63a1aa79a94cbe34c9209f59af8",
+			"follower" : null,
+			"following" : null
+		};
+		//快速登录
+		window.mb_quick_reg = function(el, from) {
+			var logined = true;
+			if (!MI.user.account) {
+				if (device == 'phone') {
+					document.location.href = 'http://ui.ptlogin2.qq.com/cgi-bin/login?daid=8&appid=46000101&hln_css=http://dajia.qq.com/logo/mobile_logo3.png&style=8&low_login_enable=1&hln_u_tips=%E8%AF%B7%E8%BE%93%E5%85%A5%E6%82%A8%E7%9A%84QQ%E5%8F%B7%E7%A0%81&s_url='
+							+ document.location.href;
+				} else {
+					var frame = $('QuickLoginFrame');
+					if (frame) {
+						UI.remove(frame);
+					}
+					MI.dialog
+							.show({
+								title : '<h3 class="DmainTit">微博登录</h3>',
+								html : '<iframe src="http://mini.t.qq.com/mblogin_quick.htm" frameborder="0" scrolling="no" width="370" height="187" id="QuickLoginFrame"></iframe>',
+								width : 441
+							});
+				}
+				logined = false;
+			}
+			MI.Bos('btnPortalQuickLogin', from);
+			return logined;
+		}
+
+		MIApi.init({
+			id : 12,
+			user : {
+				account : MI.user.account,
+				name : MI.user.name,
+				fun : {
+					rtPicPub : 0,
+					hasbrace : 0
+				}
+			},
+			css : false,
+			login : mb_quick_reg,
+			quickLoginCall : function(isReg) { //默认快速登录回调
+				MI.app({
+					'light/mi.Light' : function() {
+						MI.Light.quickLoginCall(isReg);
+					}
+				});
+			}
+		});
+		//版本控制	
+		// 去除主站样式
+		MI.versionSet({
+			base : '130416a',
+			wide : '130326',
+			QmEditor : '130724',
+			'light/mi.Light' : '140114',
+			'Slide' : '130418'
+		});
+
+		MI.app({
+			'light/mi.Light' : function() {
+				window.mb_quick_reg_call = MI.Light.quickLoginCall;
+			}
+		});
+		var topBack = $("topBtn"), updateTip, closeUpdate, login;
+		if (topBack) {
+			UI.EA(topBack, "click", function(e) {
+				UI.E(e).prevent();
+				UI.scrollTo(document.body, UI.scrollX(), 0);
+			});
+		}
+		var login = $$('.borClear')[0], logout;
+		UI.EA(login, 'click', function(e) {
+			UI.E(e).prevent();
+			mb_quick_reg(login, '');
+		});
+		var logout = $$('.djLogOut')[0], logoutEvent;
+		UI
+				.EA(
+						logout,
+						'click',
+						function(e) {
+							var ptLogoutJs;
+							if (device == 'phone') {
+								ptLogoutJs = 'https://ui.ptlogin2.qq.com/js/ptloginout.js';
+							} else {
+								ptLogoutJs = 'http://imgcache.qq.com/ptlogin/ac/v9/js/ptloginout.js'
+							}
+							UI
+									.getScript(
+											ptLogoutJs,
+											function() {
+												var host = document.location.host;
+												pt_logout
+														.logout(function(n) {
+															switch (n) {
+															case 0:
+															default:
+																MI
+																		.alert('登出失败，请稍后重试');
+																document.location.href = 'http://t.qq.com/logout.php?url=http://'
+																		+ host;
+																break;
+															case 1:
+															case 2:
+																document.location.href = 'http://t.qq.com/logout.php?url=http://'
+																		+ host;
+																break;
+															}
+														});
+											});
+							UI.E(e).prevent();
+						});
+		if (!UI.B.qq && (UI.B.ie8 || UI.B.ie7 || UI.B.ie6)) {
+			updateTip = $$(".browserUpdate_mod")[0];
+			closeUpdate = $$(updateTip, ".closeBox")[0];
+			if (!UI.cookie('closeUpdate')) {
+				UI.removeClass(updateTip, 'hidden');
+				UI.EA(closeUpdate, "click", function(e) {
+					UI.E(e).prevent();
+					UI.cookie('closeUpdate', 1, 7, 'dajia.qq.com');
+					UI.addClass(updateTip, 'hidden');
+				});
+			}
+		}
+		//IE6/7/8增加对宽屏支持
+		if ((UI.B.ie8 || UI.B.ie7 || UI.B.ie6) && UI.pageWidth() > 1240) {
+			UI.addClass(document.body, 'bigBox');
+		}
+		UI.linkEvent.add('windowFocus', function() {
+			MI.app({
+				'light/mi.Light' : function() {
+					MI.Light.checkLogin();
+				}
+			});
+		});
+
+		(function() {
+			window.addEvent = function(o, size) {
+				UI.EA(o, "click", function(e) {
+					MI.Bos({
+						id : 1220,
+						sBiz : 'dajia_web',
+						name : 'right_blog_block',
+						sBak1 : 'home',
+						sBak2 : MI.user.account
+					});
+					window.open("http://" + document.location.host + "/blog/"
+							+ UI.A(o, "rel"));
+				});
+				UI.each($$(o, "a"), function(o) {
+					UI.EA(o, "click", function(e) {
+						UI.E(e).stop();
+					});
+				});
+				UI.each($$(o, "img"), function(o) {
+					UI.EA(o, "load", function(e) {
+						setTimeout(function() {
+							resizeImg(o, size);
+						}, 0);
+					});
+				});
+			};
+		})();
+		(function() {
+			var firstImg = $$(".focusImg")[0], title = $$(".title")[0], category = $$(
+					title, "strong")[0], nav = $$(".nav")[0], categoryTabs, cur, index, curClass = "now", call = {
+				content : function(data, cache) {
+					var list, i = index;
+					if (cache) {
+						list = $$(cache, ".item");
+						UI.each(list, function(o) {
+							addEvent(o, 192);
+						});
+					}
+					if (!UI.isUndefined(i)) {
+						UI.removeClass($$(UI.parent(categoryTabs[i]), "."
+								+ curClass)[0], curClass);
+						UI.addClass(categoryTabs[i], curClass);
+					}
+					if (firstImg) {
+						if (!cur) {
+							UI.hide(firstImg);
+						}
+						if (!i) {
+							UI.show(firstImg);
+						}
+					}
+					cur = i;
+				},
+				follow : function(data, cache) {
+					var list, i = index;
+					if (cache) {
+						list = $$(cache, ".item");
+						UI.each(list, function(o) {
+							addFollowEvent(o, UI.A(o, "alt"));
+						});
+					}
+					if (i != cur) {
+						UI.removeClass(categoryTabs[cur], curClass);
+						UI.addClass(categoryTabs[i], curClass);
+					}
+					cur = i;
+				}
+			}, url = "http://" + document.location.host + "/rank", header = {
+				"4" : "<div class=\"subscription_mod\"><div class=\"list clear\"><ul id=\"lightBlogList\" class=\"lightBlogList\"></ul></div></div>",
+				"5" : "<div class=\"teamList tj\"><div id=\"lightBlogList\" class=\"lightBlogList\"></div></div>"
+			}, empty = {
+				"4" : "<div class=\"subscription_mod\"><div class=\"none\" id=\"lightBlogList\"><h1>您还没有订阅任何作者</h1><div class=\"more\"><a href=\"" + url + "\" target=\"_blank\">去看看这里有哪些作者&nbsp;&gt;&gt;</a></div></div></div>",
+				"5" : "<div class=\"subscription_mod\"><div class=\"none\" id=\"lightBlogList\"><h1>您还没有订阅任何作者</h1><div class=\"more\"><a href=\"" + url + "\" target=\"_blank\">去看看这里有哪些作者&nbsp;&gt;&gt;</a></div></div></div>"
+			};
+			if ("home" == "follow" || "home" == "sub") {
+				categoryTabs = $$(title, "strong");
+				cur = parseInt(UI.A(title, "cur")) || 0;
+			} else {
+				categoryTabs = $$(nav, "li");
+				cur = parseInt(UI.A(nav, "cur")) || 0;
+			}
+			MI.category = {};
+			if (categoryTabs[0]) {
+				MI.category.data = MI.json(UI.A($$(
+						UI.parent(categoryTabs[cur]), ".now")[0], "param"));
+			}
+			if ("home" == "user" || "home" == "search") {
+				MI.category.data = {
+					type : 1
+				};
+			}
+			window.addFollowEvent = function(o, account) {
+				var btn = $$(o, ".dyBtn a")[0], Self = btn;
+				UI.EA(btn, "click", function(e) {
+					var e = UI.E(e);
+					e.prevent();
+					MI.Light.follow(account, Self, {
+						cancel : "dyBtnCancel",
+						call : function(isFollow) {
+							if (isFollow) {
+								Self.innerHTML = "<em>+</em>订阅";
+							} else {
+								Self.innerHTML = "<em>-</em>取消";
+							}
+						}
+					});
+				});
+			}
+			UI.EA(category, "click", function(e) {
+				var arrow = $$(category, "span")[0];
+				UI.E(e).prevent();
+				UI.toggleClass(arrow, "jtDown");
+				UI.toggleClass(arrow, "jtUp");
+				UI.toggleClass(nav, "hidden");
+			});
+			if ("home" != "search") {
+				UI
+						.each(
+								categoryTabs,
+								function(o, i) {
+									UI
+											.EA(
+													o,
+													"click",
+													function(e) {
+														UI.E(e).prevent();
+														if (UI.hasClass(o,
+																curClass)) {
+															return;
+														}
+														MI.category.data = MI
+																.json(UI
+																		.A(o,
+																				"param"));
+														index = i;
+														MI.Light
+																.getMore(
+																		o,
+																		"lightBlogList",
+																		MI.category.data,
+																		{
+																			replace : 1,
+																			header : header[MI.category.data.type],
+																			empty : empty[MI.category.data.type],
+																			call : MI.category.data.type == 4 ? call.follow
+																					: call.content
+																		});
+													});
+								});
+			}
+			window.onload = function() {
+				UI
+						.EA(
+								window,
+								"scroll",
+								function() {
+									MI
+											.app({
+												"light/mi.Light" : function() {
+													MI.Light
+															.scroll(
+																	"lightBlogList",
+																	MI.category.data,
+																	{
+																		call : MI.category.data.type == 4 ? call.follow
+																				: call.content
+																	});
+												}
+											});
+								});
+				if (MI.category.data.type == "4") {
+					UI.each($$("#lightBlogList, li"), function(o) {
+						var account = UI.A(o, "alt");
+						addFollowEvent(o, account);
+					});
+				}
+			};
+		})();
+	});
+	function ptlogin2_onResize(w, h) {
+		var F = $('QuickLoginFrame');
+		if (F)
+			F.style.height = h + 'px'
+	}
+	function ptui_notifyClose() {
+		MI.dialog.hide()
+	}
+
+	if (device == 'pc') {
+		MIRun(function() {
+			window.sub_id = 8;
+			window.sub_tit = '腾讯 · 大家';
+			MILoad('http://mat1.gtimg.com/view/curls/js/dajia/dy_dajia_1.1.js');
+		});
+	}
+</script>
+
+<script type="text/javascript">
+	MIRun(function() {
+		(function() {
+			var box, list, more, items, itemHeight, moreHeight, lastDisplay, loading = false, author = {};
+			if (UI.B.ie6 || UI.B.ie7 || UI.B.ie8) {
+				box = $$('.boxA')[0];
+				list = $$(box, '.list ul')[0];
+				more = $$(box, '.more')[0];
+				items = $$(list, 'li');
+				itemHeight = 105;
+				moreHeight = UI.height(more);
+				lastDisplay = items.length - 1;
+			}
+			window.onresize = function() {
+				var delay;
+				if (loading) {
+					return;
+				}
+				loading = true;
+				delay = setTimeout(
+						function() {
+							if (false) {
+								if (UI.B.ie6 || UI.B.ie7 || UI.B.ie8) {
+									var winHeight = UI.windowHeight(), top = UI
+											.getY(list),
+									// 要显示或隐藏的数目，正的显示，负值隐藏
+									toDisplay = Math.floor((winHeight
+											- moreHeight - top
+											- UI.height(list) + UI.scrollY())
+											/ itemHeight), i, len = items.length;
+									if (toDisplay > 0) {
+										// 循环展示
+										for (; toDisplay != 0
+												&& lastDisplay + 1 < len; lastDisplay++, toDisplay--) {
+											UI.show(items[lastDisplay + 1]);
+										}
+									} else if (toDisplay < 0) {
+										// 循环隐藏
+										for (; lastDisplay > 0
+												&& toDisplay != 0; lastDisplay--, toDisplay++) {
+											UI.hide(items[lastDisplay]);
+										}
+									}
+								}
+							}
+							if (UI.windowWidth() <= 960 && !author.slide) {
+								MI.app({
+									'Slide' : function() {
+										author.slide = new MI.Slide({
+											target : $$('.boxB')[0],
+											vertical : 1,
+											loop : 0,
+											call : function(num) {
+												if (num == 1) {
+													UI.hide(this._prev);
+												} else {
+													UI.show(this._prev);
+												}
+												if (num == this.total) {
+													UI.hide(this._next);
+												} else {
+													UI.show(this._next);
+												}
+											}
+										});
+										author.slide.page(1);
+									}
+								});
+							}
+							loading = false;
+							clearTimeout(delay);
+						}, 100);
+			};
+			window.onresize && window.onresize();
+		})();
+	});
+</script>
+<script>
+	MIRun(function() {
+		setTimeout(function() {
+			UI.getScript('http://pingjs.qq.com/ping.js', function() {
+				if (typeof (pgvMain) == 'function') {
+					if (MI && MI.user.fun.wideStyle) {
+					}
+					pgvMain()
+				}
+			})
+		}, 1000)
+	});
+</script>
+ </html> 
+ </#macro>
