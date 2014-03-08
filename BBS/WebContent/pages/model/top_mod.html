@@ -1,0 +1,23 @@
+
+<div class="top_mod">
+	<div class="logo_mod" title="" alt="">
+		<a href="img/logo.png">3243</a>
+	</div>
+	<script>
+	function add(){
+		$.get("/BBS/blog/add",null,function(data){
+			if(data == "authfail"){
+				alert("请先登陆后再进行操作！");
+			}else{
+				location.href="/BBS/blog/gotoAdd";
+			}
+		});
+	}
+	</script>
+	<!-- Nav -->
+	<div class="topBar_mod">
+		<a href="/BBS/0_0">首页</a> 
+		<a class="myRss" href="#" onclick="javascript:add();">发布新帖</a> 
+		<a href="/BBS/logout">退出</a>
+	</div>
+</div>

@@ -22,19 +22,19 @@ audio:not ([controls] ){
 [hidden],template {
 	display: none
 }
+/**lhl
 html {
 	font-family: sans-serif;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%
 }
+
 body {
 	margin: 0
 }
-
 a {
 	background: transparent
 }
-/**lhl
 **/
 a:focus {
 	outline: thin dotted
@@ -251,11 +251,6 @@ table {
 		border: 1px solid #ddd !important
 	}
 }
-.form-group,.form-control,*:before,*:after {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box
-}
 /**lhl
 *,*:before,*:after {
 	-webkit-box-sizing: border-box;
@@ -281,11 +276,12 @@ input,button,select,textarea {
 	font-size: inherit;
 	line-height: inherit
 }
-/**
+
 a {
 	color: #428bca;
 	text-decoration: none
 }
+
 a:hover,a:focus {
 	color: #2a6496;
 	text-decoration: underline
@@ -296,7 +292,6 @@ a:focus {
 	outline: 5px auto -webkit-focus-ring-color;
 	outline-offset: -2px
 }
-**/
 
 img {
 	vertical-align: middle
@@ -346,14 +341,14 @@ hr {
 	clip: rect(0, 0, 0, 0);
 	border: 0
 }
-/**
+
 h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6 {
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-weight: 500;
 	line-height: 1.1;
 	color: inherit
 }
-**/
+
 h1 small,h2 small,h3 small,h4 small,h5 small,h6 small,.h1 small,.h2 small,.h3 small,.h4 small,.h5 small,.h6 small,h1 .small,h2 .small,h3 .small,h4 .small,h5 .small,h6 .small,.h1 .small,.h2 .small,.h3 .small,.h4 .small,.h5 .small,.h6 .small
 	{
 	font-weight: normal;
@@ -378,7 +373,6 @@ h4,h5,h6 {
 h4 small,h5 small,h6 small,h4 .small,h5 .small,h6 .small {
 	font-size: 75%
 }
-
 /**lhl
 h1,.h1 {
 	font-size: 36px
@@ -387,6 +381,7 @@ h1,.h1 {
 h2,.h2 {
 	font-size: 30px
 }
+
 h3,.h3 {
 	font-size: 24px
 }
@@ -1921,10 +1916,6 @@ textarea.input-lg {
 	margin-left: -15px
 }
 **/
-.form-horizontal .form-group {
-	margin-right: -15px;
-	margin-left: -100px
-}
 .form-horizontal .form-group:before,.form-horizontal .form-group:after {
 	display: table;
 	content: " "
@@ -5549,7 +5540,7 @@ button.close {
 	margin-top: -3px
 }
 
-.tooltip.rightb {
+.tooltip.right {
 	padding: 0 5px;
 	margin-left: 3px
 }
@@ -5559,7 +5550,7 @@ button.close {
 	margin-top: 3px
 }
 
-.tooltip.leftb {
+.tooltip.left {
 	padding: 0 5px;
 	margin-left: -3px
 }
@@ -5604,7 +5595,7 @@ button.close {
 	border-width: 5px 5px 0
 }
 
-.tooltip.rightb .tooltip-arrow {
+.tooltip.right .tooltip-arrow {
 	top: 50%;
 	left: 0;
 	margin-top: -5px;
@@ -5612,7 +5603,7 @@ button.close {
 	border-width: 5px 5px 5px 0
 }
 
-.tooltip.leftb .tooltip-arrow {
+.tooltip.left .tooltip-arrow {
 	top: 50%;
 	right: 0;
 	margin-top: -5px;
@@ -5665,7 +5656,7 @@ button.close {
 	margin-top: -10px
 }
 
-.popover.rightb {
+.popover.right {
 	margin-left: 10px
 }
 
@@ -5673,7 +5664,7 @@ button.close {
 	margin-top: 10px
 }
 
-.popover.leftb {
+.popover.left {
 	margin-left: -10px
 }
 
@@ -5727,7 +5718,7 @@ button.close {
 	content: " "
 }
 
-.popover.rightb .arrow {
+.popover.right .arrow {
 	top: 50%;
 	left: -11px;
 	margin-top: -11px;
@@ -5736,7 +5727,7 @@ button.close {
 	border-left-width: 0
 }
 
-.popover.rightb .arrow:after {
+.popover.right .arrow:after {
 	bottom: -10px;
 	left: 1px;
 	border-right-color: #fff;
@@ -5761,7 +5752,7 @@ button.close {
 	content: " "
 }
 
-.popover.leftb .arrow {
+.popover.left .arrow {
 	top: 50%;
 	right: -11px;
 	margin-top: -11px;
@@ -5770,7 +5761,7 @@ button.close {
 	border-right-width: 0
 }
 
-.popover.leftb .arrow:after {
+.popover.left .arrow:after {
 	right: 1px;
 	bottom: -10px;
 	border-left-color: #fff;
@@ -5824,15 +5815,15 @@ button.close {
 	left: -100%
 }
 
-.carousel-inner>.next.leftb,.carousel-inner>.prev.rightb {
+.carousel-inner>.next.left,.carousel-inner>.prev.right {
 	left: 0
 }
 
-.carousel-inner>.active.leftb {
+.carousel-inner>.active.left {
 	left: -100%
 }
 
-.carousel-inner>.active.rightb {
+.carousel-inner>.active.right {
 	left: 100%
 }
 
@@ -5850,7 +5841,7 @@ button.close {
 	filter: alpha(opacity = 50)
 }
 
-.carousel-control.leftb {
+.carousel-control.left {
 	background-image: -webkit-linear-gradient(left, color-stop(rgba(0, 0, 0, 0.5)
 		0), color-stop(rgba(0, 0, 0, 0.0001) 100%));
 	background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0,
@@ -5860,7 +5851,7 @@ button.close {
 		endColorstr='#00000000', GradientType=1)
 }
 
-.carousel-control.rightb {
+.carousel-control.right {
 	right: 0;
 	left: auto;
 	background-image: -webkit-linear-gradient(left, color-stop(rgba(0, 0, 0, 0.0001)

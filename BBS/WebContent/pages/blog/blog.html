@@ -1,65 +1,11 @@
-<#include "../base.html"> <@html title="${user.name}： ${topic.title}">
-	<div class="browserUpdate_mod hidden">
-		<div class="txt">
-			您的古董级IE浏览器可能会遇到兼容问题，强烈建议您升级为更先进的浏览器以获得“腾讯大家”的最佳体验&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-				href="http://www.google.com/intl/zh-CN/chrome/browser/"
-				target="_blank">马上升级&gt;&gt;</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
-				class="closeBox"><a href="#" target="_blank" title="关闭"
-				alt="关闭">X</a></span>
-		</div>
-	</div>
+<#include "../basebt.html"> <@html title="${user.name}： ${topic.title}">
+<#include "../model/tip_mod.html">
 	<div class="layoutB clear">
-
-		<div class="top_mod">
-			<!-- Logo -->
-			<div class="logo_mod" title="大家" alt="大家">
-				<a
-					boss="{id:1220, sBiz:'dajia_web', name:'event_logo', sBak1:'blog', sBak2:'lhlliang'}"
-					href="">大家</a>
-			</div>
-			<!-- Nav -->
-			<div class="topBar_mod">
-				<a href="http://dajia.qq.com/home"
-					boss="{id:1220, sBiz:'dajia_web', name:'nav_home', sBak1:'blog', sBak2:'lhlliang'}">首页</a><a
-					class="myRss" href="http://dajia.qq.com/subscription"
-					boss="{id:1220, sBiz:'dajia_web', name:'nav_sub', sBak1:'blog', sBak2:'lhlliang'}">我的订阅</a><a
-					class="djLogOut"
-					href="http://t.qq.com/logout.php?url=http://dajia.qq.com/home"
-					boss="{id:1220, sBiz:'dajia_web', name:'nav_logout', sBak1:'blog', sBak2:'lhlliang'}">退出</a><a
-					href="http://www.qq.com/?pgv_ref=dajia" class="clearBor"
-					target="_blank">腾讯网</a>
-			</div>
-		</div>
+		<#include "../model/top_mod.html">
 
 		<!--Left Side-->
 		<div class="left">
-			<div class="author_mod clear ">
-				<div class="face">
-					<a href="http://dajia.qq.com/user/wolin77#af"
-						boss="{id:1220, sBiz:'dajia_web', name:'left_profile_pic', sBak1:'blog', sBak2:'lhlliang'}"><span><img
-							src="http://t2.qlogo.cn/mbloghead/6b76b9e541c09afdb28a/100"
-							width="102" height="102" alt="" /></span></a>
-				</div>
-
-				<div class="name">
-					<a href="http://dajia.qq.com/user/wolin77#af"
-						boss="{id:1220, sBiz:'dajia_web', name:'left_profile_name', sBak1:'blog', sBak2:'lhlliang'}">成庆</a>
-				</div>
-
-				<div class="text tj">成庆，大学教师，研究中国近代思想史与佛教史。</div>
-			</div>
-			<div class="ewm_mod">
-				<div class="pt">
-					<div class="pic">
-						<img src="http://mat1.gtimg.com/www/mb/images/light_v2/ewm.png"
-							width="74" height="74" title="《大家》官方微信" alt="《大家》官方微信" />
-					</div>
-					<div class="text">
-						<h2>《大家》官方微信</h2>
-						<p>微信扫描二维码，每天获取精彩资讯</p>
-					</div>
-				</div>
-			</div>
+			<#include "../model/ad_mod.html">
 		</div>
 		<!--Left-End-->
 		<!--Right Side-->
@@ -72,8 +18,7 @@
 					<h2>—— ${topic.subtitle}</h2>
 					</#if>
 					<h3>
-						<a href="http://dajia.qq.com/user/wolin77#af"
-							boss="{id:1220, sBiz:'dajia_web', name:'right_blog_user', sBak1:'blog', sBak2:'lhlliang'}">${user.name}</a>
+						<a href="#" >${user.name}</a>
 						<span class="date">${topic.createTime}</span>
 					</h3>
 				</div>
@@ -81,8 +26,7 @@
 				<div class="shareMenuV2">
 					<div class="box">
 						<div class="btn">
-							<a href="#" class="_down"
-								boss="{id:1220, sBiz:'dajia_web', name:'right_blog_share_button', sBak1:'blog', sBak2:'lhlliang'}">分享</a>
+							<a href="#" class="_down">收藏</a>
 						</div>
 						<div class="menu hidden"></div>
 					</div>
@@ -114,28 +58,30 @@
 
 				<div class="data">
 					<span class="read">阅读(<strong>${topic.clickCount}</strong>)
-					</span> <span class="commentNum_mod"> <a href="#replyPub"
-						boss="{id:1220, sBiz:'dajia_web', name:'right_blog_reply', sBak1:'blog', sBak2:'lhlliang'}">评论</a>
+					</span> <span class="commentNum_mod"> <a href="#replyPub">评论</a>
 						<span class="num">${topic.replyCount}</span>
-					</span> <span class="like_mod"><span class="addOne"></span><span
-						rel="364987049006566" class="_likeBtnDisabled"><a href="#"
-							onclick="MI.Light.like('364987049006566', UI.parent(this)); return false;"
-							boss="{id:1220, sBiz:'dajia_web', name:'event_like', sBak1:'blog', sBak2:'lhlliang'}">赞</a></span><span
-						class="num">92</span></span>
+					</span> 
+					<!-- 
+					<span class="like_mod">
+						<span class="addOne"></span>
+					 	<span class="_likeBtnDisabled">
+					 		<a href="#" onclick="">赞</a>
+					 	</span>
+					 	<span class="num">92</span>
+					</span>
+					 -->
 				</div>
 
 				<!--Hidden Profile-->
 				<div class="author_mod clear  hidden ">
 					<div class="face">
-						<a href="http://dajia.qq.com/user/wolin77#af"
-							boss="{id:1220, sBiz:'dajia_web', name:'left_profile_pic', sBak1:'blog', sBak2:'lhlliang'}"><span><img
+						<a href="http://dajia.qq.com/user/wolin77#af"><span><img
 								src="http://t2.qlogo.cn/mbloghead/6b76b9e541c09afdb28a/100"
 								width="102" height="102" alt="" /></span></a>
 					</div>
 
 					<div class="name">
-						<a href="http://dajia.qq.com/user/wolin77#af"
-							boss="{id:1220, sBiz:'dajia_web', name:'left_profile_name', sBak1:'blog', sBak2:'lhlliang'}">成庆</a>
+						<a href="http://dajia.qq.com/user/wolin77#af">成庆</a>
 					</div>
 
 					<div class="text tj">成庆，大学教师，研究中国近代思想史与佛教史。</div>
@@ -144,21 +90,6 @@
 				<div class="articleIndex_mod clear">
 
 					<!--Relate Blog-->
-					<div class="moreArticle clear">
-						<h2>作者其它文章：</h2>
-						<ul>
-							<li><a href="http://dajia.qq.com/blog/358175104781869"
-								boss="{id:1220, sBiz:'dajia_web', name:'right_blog_relate', sBak1:'blog', sBak2:'lhlliang'}">祈福的迷失与信仰症候</a></li>
-							<li><a href="http://dajia.qq.com/blog/352584014583541"
-								boss="{id:1220, sBiz:'dajia_web', name:'right_blog_relate', sBak1:'blog', sBak2:'lhlliang'}">那些沉默的书局</a></li>
-							<li><a href="http://dajia.qq.com/blog/368006049535178"
-								boss="{id:1220, sBiz:'dajia_web', name:'right_blog_relate', sBak1:'blog', sBak2:'lhlliang'}">如何“看见台湾”</a></li>
-							<li><a href="http://dajia.qq.com/blog/328962118966874"
-								boss="{id:1220, sBiz:'dajia_web', name:'right_blog_relate', sBak1:'blog', sBak2:'lhlliang'}">这个时代中国人的生与死</a></li>
-							<li><a href="http://dajia.qq.com/blog/161420119558903"
-								boss="{id:1220, sBiz:'dajia_web', name:'right_blog_relate', sBak1:'blog', sBak2:'lhlliang'}">梁朝伟剃头禅修，自我拯救路漫长</a></li>
-						</ul>
-					</div>
 					<!-- Article In Column -->
 				</div>
 
@@ -178,7 +109,7 @@
 									$(divId).hide();								
 								}
 							} else {
-								alert("评论失败！");
+								alert("请先登陆后再发表您的评论！");
 							}
 						}, "text");
 					}
@@ -193,9 +124,8 @@
 							</div>
 							<br>
 							<div class="commentTool">
-								<span class="btn"> <a class="sendBtn"
-									boss="{id:1220, sBiz:'dajia_web', name:'1_reply_publish', sBak1:'blog', sBak2:'_no_login_'}"
-									href="javascript:submit(0);">评 论</a> <!-- 
+								<span class="btn"> <a class="sendBtn" href="javascript:submit(0);">评 论</a> 
+								<!-- 
 										<button type="submit" class="sendBtn"
 										boss="{id:1220, sBiz:'dajia_web', name:'1_reply_publish', sBak1:'blog', sBak2:'_no_login_'}">
 										评 论</button>
@@ -228,24 +158,21 @@
 						<div id="replyList" class="commentBox tj" p_h="1392963496237">
 							<#list replys as reply> <#list users as u> <#if u_index ==
 							reply_index && u_index < 10>
-							<div id="358098027376886" class="item talkListLi" from="15"
-								rel="1392796766" cont="">
+							<div id="" class="item talkListLi" >
 								<div class="text msgBox">
 									<span class="name userName"> <strong> <a
-											title="${u.name}" href="http://t.qq.com/taoren">${u.name}</a>
+											title="${u.name}" href="#">${u.name}</a>
 									</strong>
 									</span> <span class="msgCnt">${reply.content}</span>
 								</div>
 								<div class="bottomBar">
 									<span class="commentBtn"> <a class="comt"
-										boss="{id:1220, sBiz:'dajia_web', name:'right_blog_sub_reply', sBak1:'blog', sBak2:'_no_login_'}"
 										onclick="reply(${reply.id});return false;" href="#">评论</a>
 									</span> <span class="date">${reply.replyTime}</span>
 								</div>
 							</div>
 							<!-- reply -->
-							<div class="talkWrap comtWrap bgr3" p_h="1392963496240"
-								id="${reply.id}" style="display: none">
+							<div class="talkWrap comtWrap bgr3" id="${reply.id}" style="display: none">
 								<div class="commentWindow">
 									<h3>
 										<span class="top" alt="关闭" title="关闭"> <a class="close"
@@ -262,7 +189,6 @@
 										</div>
 										<div class="commentTool clear">
 											<span class="btn"> <a class="sendBtn"
-												boss="{id:1220, sBiz:'dajia_web', name:'2_reply_publish', sBak1:'blog', sBak2:'_no_login_'}"
 												href="javascript:submit(${reply.id});" title="评论">评 论</a>
 											</span> <span class="countTxt clew"> 
 										</div>
@@ -300,18 +226,7 @@
 
 				</div>
 			</div>
-			<div class="footer_mod">
-				<p>
-					<a target="_blank" href="http://dajia.qq.com/">首页</a>| <a
-						target="_blank" href="http://www.qq.com/">腾讯网</a>| <a
-						target="_blank" href="http://t.qq.com/">腾讯微博</a>| <a
-						target="_blank" href="http://v.qq.com/">腾讯视频</a>| <a
-						target="_blank" href="http://dajia.qq.com/rank">全部作者</a><br />
-					Copyright&nbsp;&copy;&nbsp;1998-2013&nbsp;Tencent.All&nbsp;Rights&nbsp;Reserved<br />
-					腾讯出品
-				</p>
-			</div>
-
+			<#include "../model/footer_mod.html">
 		</div>
 		<!--Right-End-->
 	</div>

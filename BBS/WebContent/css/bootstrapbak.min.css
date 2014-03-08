@@ -22,6 +22,7 @@ audio:not ([controls] ){
 [hidden],template {
 	display: none
 }
+/**lhl
 html {
 	font-family: sans-serif;
 	-webkit-text-size-adjust: 100%;
@@ -34,7 +35,6 @@ body {
 a {
 	background: transparent
 }
-/**lhl
 **/
 a:focus {
 	outline: thin dotted
@@ -250,11 +250,6 @@ table {
 	.table-bordered th,.table-bordered td {
 		border: 1px solid #ddd !important
 	}
-}
-.form-group,.form-control,*:before,*:after {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box
 }
 /**lhl
 *,*:before,*:after {

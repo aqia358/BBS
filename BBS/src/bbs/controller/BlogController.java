@@ -14,6 +14,7 @@ import bbs.model.User;
 
 import com.jfinal.aop.Before;
 import com.jfinal.core.Controller;
+import com.jfinal.plugin.activerecord.Db;
 import com.jfinal.upload.UploadFile;
 
 public class BlogController extends Controller{
@@ -22,6 +23,10 @@ public class BlogController extends Controller{
 		int id = getParaToInt(0);
 		int page = getParaToInt(1);
 		Topic topic = Topic.dao.findById(id);
+		long count = (int) (topic.getLong("clickCount")+1);
+		topic.set("clickCount", count);
+		topic.update();
+//		Db.update("update topic set clickCount = "+topic.get("clickCount")+" where id = "+id);
 		User user = User.dao.findById(topic.get("userId"));
 		String limit = " limit "+page*10 +" ,10";
 		List<Reply> total = Reply.dao.find("select * from reply where topicId = " + id);
@@ -35,8 +40,11 @@ public class BlogController extends Controller{
 		setAttr("users", users);
 		render("blog.html");
 	}
-	
+	@Before(AuthInterceptor.class)
 	public void add() {
+	}
+
+	public void gotoAdd() {
 		render("add.html");
 	}
 	
@@ -64,10 +72,20 @@ public class BlogController extends Controller{
 		reply.set("replyTime", new Timestamp(new Date().getTime()));
 		reply.set("topicId", id);
 		reply.set("userId", u.get("id"));
+		Topic t = Topic.dao.findById(id);
+		long count = (int) (t.getLong("replyCount")+1);
+		t.set("replyCount", count);
+		t.update();
+//		Topic.dao.find("update topic set replyCount = "+t.getInt("replyCount")+1+" where id = "+id);
 		System.out.println(reply.get("content")+""+reply.get("topicId"));
 		reply.save();
 		renderText("success");
 	}
+	
+	public void replyCount(){
+		
+	}
+/**************************************************************/	
 	public void dajia() {
 		render("dajiablog.html");
 	}

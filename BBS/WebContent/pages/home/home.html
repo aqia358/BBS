@@ -1,101 +1,22 @@
-<#include "../base.html"> <@html title="FreeMarker 测试">
-<div class="browserUpdate_mod hidden">
-	<div class="txt">
-		您的古董级IE浏览器可能会遇到兼容问题，强烈建议您升级为更先进的浏览器以获得最佳体验&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-			href="http://www.google.com/intl/zh-CN/chrome/browser/"
-			target="_blank">马上升级&gt;&gt;</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
-			class="closeBox"><a href="#" target="_blank" title="关闭"
-			alt="关闭">X</a></span>
-	</div>
-</div>
+<#include "../basebt.html"> <@html title="睿学堂论坛">
+<#include "../model/tip_mod.html">
 <div class="layoutA layoutA_C clear">
 
-	<div class="top_mod">
-		<div class="logo_mod" title="" alt="">
-			<a href="img/logo.png">3243</a>
-		</div>
-
-		<!-- Nav -->
-		<div class="topBar_mod">
-			<a href="#">首页</a>
-			<a class="myRss" href="#">我的订阅</a>
-			<a class="djLogOut" href="#">退出</a>
-		</div>
-	</div>
-
+	<#include "../model/top_mod.html">
 	<!--Left Side-->
 	<div class="left">
-		<div class="authorBox_mod">
-			<h2>今日推荐作家</h2>
+			<#if my??>
+			<div class="authorBox_mod">
 			<div class="boxA">
-				<div class="list clear">
-					<ul class="clear">
-						<li><div class="pt">
-								<img width="60" height="85"
-									src="http://img1.gtimg.com/microblog/pics/hv1/224/158/1519/98813489.jpg" />
-								<h2>
-									<a href="http://dajia.qq.com/user/zhangfacai#af">张发财</a>
-								</h2>
-								<p title="设计师，历史专栏作家。">设计师，历史专栏作家。</p>
-								<h3>
-									<a href="http://dajia.qq.com/blog/363679020386595">鸦片烟枪</a>
-								</h3>
-							</div></li>
-						<li class="liA"><div class="pt">
-								<img width="60" height="85"
-									src="http://img1.gtimg.com/microblog/pics/hv1/222/158/1519/98813487.jpg" />
-								<h2>
-									<a href="http://dajia.qq.com/user/suxiaohe#af">苏小和</a>
-								</h2>
-								<p title="财经作家，独立书评人。">财经作家，独立书评人。</p>
-								<h3>
-									<a href="http://dajia.qq.com/blog/365880115840841">性欲到底有多么迷人</a>
-								</h3>
-							</div></li>
-					</ul>
-				</div>
-				<div class="more">
-					<a target="_blank" href="http://dajia.qq.com/rank">查看全部作者</a>
-					<span class="jtRight"></span>
+				<div class="list clear float-right">
+					<p><h1>欢迎 ${my.name} 的到来</h1></p>
 				</div>
 			</div>
-
-			<div class="boxB clear">
-				<div class="list">
-					<ul class="clear">
-						<li><div class="pt">
-								<img width="60" height="85"
-									src="http://img1.gtimg.com/microblog/pics/hv1/224/158/1519/98813489.jpg" />
-								<h2>
-									<a href="http://dajia.qq.com/user/zhangfacai#af">张发财</a>
-								</h2>
-								<p title="设计师，历史专栏作家。">设计师，历史专栏作家。</p>
-								<h3>
-									<a href="http://dajia.qq.com/blog/363679020386595">鸦片烟枪</a>
-								</h3>
-							</div></li>
-						<li class="liA"><div class="pt">
-								<img width="60" height="85"
-									src="http://img1.gtimg.com/microblog/pics/hv1/222/158/1519/98813487.jpg" />
-								<h2>
-									<a href="http://dajia.qq.com/user/suxiaohe#af">苏小和</a>
-								</h2>
-								<p title="财经作家，独立书评人。">财经作家，独立书评人。</p>
-								<h3>
-									<a href="http://dajia.qq.com/blog/365880115840841">性欲到底有多么迷人</a>
-								</h3>
-							</div></li>
-					</ul>
-				</div>
-				<div class="topJt prev" style="display: none;">
-					<a href="#" target="_blank">向上</a>
-				</div>
-				<div class="bottomJt next" style="display: none;">
-					<a href="#" target="_blank">向下</a>
-				</div>
-				<div class="page" style="display: none"></div>
 			</div>
-		</div>
+			<#else>
+				<#include "../model/login_mod.html">
+				<!--login form-->
+			</#if>
 	</div>
 	<!--Left-End-->
 
@@ -118,26 +39,45 @@
 		</div>
 
 		<div class="articleList_mod">
+			<script>
+				$(function() {
+					$("#nav${nav}").attr("class", "now");
+				});
+				function onClick() {
+					if ($("#zhuti2").attr("class") == "jtDown") {
+						$("#zhuti2").attr("class", "jtUp");
+						$("#navId").removeClass("hidden");
+					} else {
+						$("#zhuti2").attr("class", "jtDown");
+						$("#navId").addClass("hidden");
+					}
+				}
+				function select(id) {
+					var rid = "#" + id;
+					$(rid).attr("class", "now");
+				}
+			</script>
 			<div class="title">
 				<h2 class="clear">
-					<strong class="menu"> <a href="">主题<span class="jtDown"></span></a>
+					<strong class="menu"> <a onclick="onClick()" href="#">主题<span
+							id="zhuti2" class="jtDown"></span></a>
 					</strong> <strong> <a href="#">精华</a>
-					</strong> <strong> <a href="#">群体</a>
 					</strong>
 				</h2>
 			</div>
-			<div class="nav clear hidden" cur="0">
+			<div id="navId" class="nav clear hidden" cur="0">
 				<ul>
-					<li class="now"><a href="#">成长故事</a></li>
-					<li><a href="#">创学派</a></li>
-					<li><a href="#">阅读空间</a></li>
-					<li><a href="#">奇趣话题</a></li>
+					<li id="nav0"><a onclick="select('nav0')"
+						href="/BBS/0_0">亲子生活</a></li>
+					<li id="nav1"><a onclick="select('nav1')"
+						href="/BBS/1_0">成长故事</a></li>
+					<li id="nav2"><a onclick="select('nav2')"
+						href="/BBS/2_0">快乐学习</a></li>
 				</ul>
 			</div>
 			<div class="focusImg">
 				<#list topics as topic> <#list users as user> <#if (topic_index ==
-				user_index) && (user_index = 0)> <a
-					href="http://dajia.qq.com/blog/382659105002691"><img
+				user_index) && (user_index = 0)> <a href="blog/${topic.id}_0"><img
 					src="/upload/${topic.img}" />
 					<h2>${topic.title}</h2>
 					<h3>作者：${user.name}</h3></a> </#if> </#list> </#list>
@@ -146,23 +86,26 @@
 				<div id="lightBlogList">
 					<#list topics as topic> <#list users as user> <#if (topic_index ==
 					user_index) && (user_index > 0)>
-					<div class="item" rel="365287040577551" ret=1392600871>
+					<div class="item">
 						<div class="pt">
 							<div class="txt clear">
 								<h2 class="clear">
-									<a href="http://dajia.qq.com/blog/365287040577551">${topic.title}</a>
+									<a href="blog/${topic.id}_0">${topic.title}</a>
 								</h2>
 								<#if topic.subtitle != "-1">
 								<h3>——${topic.subtitle}</h3>
 								</#if>
 								<div class="pic">
-									<img width="192" src="/upload/${topic.img}" />
+									<a href="blog/${topic.id}_0"> <img width="192"
+										src="/upload/${topic.img}" />
+									</a>
 								</div>
 								<div class="con haveImg">
-									<p>${topic.abstract}</p>
+									<a href="blog/${topic.id}_0">
+										<p>${topic.abstract}</p>
+									</a>
 									<div class="data">
-										<span class="author"><a
-											href="http://dajia.qq.com/user/chenjibing#af">${user.name}</a></span><span
+										<span class="author"><a href="blog/${topic.id}_0">${user.name}</a></span><span
 											class="time">${topic.createTime}</span><span class="read">阅读(<span
 											class="num">${topic.clickCount})</span></span>
 									</div>
@@ -173,23 +116,26 @@
 					</#if> </#list> </#list>
 				</div>
 			</div>
+			<div class="article_mod">
+				<div class="focusComment">
+					<div id="listWrapper">
+						<div class="page">
+							<ul>
+								<#if (page > 0)>
+								<li class="ne"><a href="${nav}_${page-1}">上一页</a></li> </#if>
+								<#list 1..total as n> <#if n == page + 1>
+								<li class="now"><a>${n}</a></li> <#else>
+								<li><a href="${nav}_${n-1}">${n}</a></li> </#if> </#list> <#if
+								(page < total - 1)>
+								<li class="ne"><a href="${nav}_${page+1}">下一页</a></li> </#if>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
-		<div class="pageMore_mod" style="display: none;">
-			<a href="#" class="_down"
-				onclick='MI.Light.getMore(this, "lightBlogList",  MI.category.data, {call: function(o, cache) { var list = $$(cache, ".item"); UI.each(list, function(o) { addEvent(o,192); }); }}); return false;'><span
-				class="jh"></span>更多↓</a>
-		</div>
-		<div class="footer_mod">
-			<p>
-				<a target="_blank" href="http://dajia.qq.com/">首页</a>| <a
-					target="_blank" href="http://www.qq.com/">腾讯网</a>| <a
-					target="_blank" href="http://t.qq.com/">腾讯微博</a>| <a
-					target="_blank" href="http://v.qq.com/">腾讯视频</a>| <a
-					target="_blank" href="http://dajia.qq.com/rank">全部作者</a><br />
-				Copyright&nbsp;&copy;&nbsp;1998-2013&nbsp;Tencent.All&nbsp;Rights&nbsp;Reserved<br />
-				腾讯出品
-			</p>
-		</div>
+		<!-- footer -->
+		<#include "../model/footer_mod.html">
 
 	</div>
 	<!--Right-End-->

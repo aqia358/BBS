@@ -6,18 +6,14 @@ import com.jfinal.aop.Before;
 import com.jfinal.aop.Interceptor;
 import com.jfinal.core.ActionInvocation;
 
-public class AuthInterceptor implements Interceptor{
+public class LoginInterceptor implements Interceptor{
 	
 	@Override
 	public void intercept(ActionInvocation ai) {
-		System.out.println("Before action invoking auth");
+		System.out.println("Before action invoking login auth");
 		User u = ai.getController().getSessionAttr("user");
-		if(u == null)
-			ai.getController().renderText("authfail");
-		else{
-			ai.getController().setAttr("my", u);
-			ai.invoke();
-		}
+		ai.getController().setAttr("my", u);
+		ai.invoke();
 		System.out.println("After action invoking");
 	}
 

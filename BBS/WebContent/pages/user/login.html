@@ -7,7 +7,7 @@
 			Height : 120
 		});
 	});
-	function check(){
+	function login(){
 		if($("#title").val() == ""){
 			alert("用户名不能为空！");
 			return false;
@@ -20,7 +20,7 @@
 	}
 </script>
 
-<form class="form-horizontal" role="form" action="user/login" method="post" onsubmit="return check();">
+<form class="form-horizontal" role="form" action="user/login" method="post" onsubmit="return login();">
 	<div class="form-group">
 		<label for="inputEmail3" class="col-sm-2 control-label">用户名</label>
 		<div class="col-sm-8">
