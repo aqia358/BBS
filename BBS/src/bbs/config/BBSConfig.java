@@ -39,15 +39,14 @@ public class BBSConfig extends JFinalConfig {
 	}
 
 	public void configRoute(Routes me) {
-
 		// me.add("/hello", HelloController.class);
 		me.add(new AdminRoutes());
 		me.add(new FrontRoutes());
 	}
 
 	public void configPlugin(Plugins me) {
-		// loadPropertyFile("database_config.txt");
-		C3p0Plugin cp = new C3p0Plugin("jdbc:mysql://localhost/bbs", "root", "tiger");
+//		 loadPropertyFile("database_config.txt");
+		C3p0Plugin cp = new C3p0Plugin("jdbc:mysql://localhost/BBS", "root", "tiger");
 		me.add(cp);
 		ActiveRecordPlugin arp = new ActiveRecordPlugin(cp);
 		me.add(arp);

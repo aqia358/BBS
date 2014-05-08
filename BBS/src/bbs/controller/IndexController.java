@@ -1,5 +1,7 @@
 package bbs.controller;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
 import java.util.List;
 
 import bbs.config.Util;
@@ -45,5 +47,37 @@ public class IndexController extends Controller{
 	}
 	public void test() {
 		render("add.html");
+	}
+	public void flag(){
+		User u = User.dao.findById(1);
+		if(u.get("password").equals("111111")) {
+			u.set("password", "dsf");
+			u.update();
+			renderText("success");
+		}else
+			renderText("fail");
+	}
+	public void dangerous() throws UnsupportedEncodingException{
+		String name = URLDecoder.decode(getPara(),"UTF-8");
+//		String name = getPara();
+		System.out.println(name);
+		User u = User.dao.findById(1);
+		if(u.get("password").equals(name)) {
+			renderText(u.get("id").toString());
+		}else
+			renderText("fail");
+	}
+	public void avoid() throws UnsupportedEncodingException{
+		String name = URLDecoder.decode(getPara(),"UTF-8");
+		System.out.println("road "+name+" have been avoid");
+		User u = User.dao.findById(1);
+		u.set("password", name+"1");
+		u.update();
+		renderText("success");
+	}
+	public void img(){
+		int id = getParaToInt();
+		System.out.println(id);
+		renderText("http://www.unn.com.cn/mediafile/201009/13/F201009131508423689211774.jpg");
 	}
 }

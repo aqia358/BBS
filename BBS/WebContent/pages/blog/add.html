@@ -88,10 +88,12 @@
 						<label for="inputPassword3" class="col-sm-2 control-label">分类</label>
 						<div class="col-sm-8">
 							<select class="form-control" name="topic.category">
-								<option>成长故事</option>
-								<option>创学派</option>
-								<option>阅读空间</option>
-								<option>奇趣话题</option>
+								<option>2分钟</option>
+								<option>5分钟</option>
+								<option>10分钟</option>
+								<option>候补文章2分钟</option>
+								<option>候补文章5分钟</option>
+								<option>候补文章10分钟</option>
 							</select>
 						</div>
 					</div>
@@ -139,17 +141,8 @@
 				onclick='MI.Light.getMore(this, "lightBlogList",  MI.category.data, {call: function(o, cache) { var list = $$(cache, ".item"); UI.each(list, function(o) { addEvent(o,192); }); }}); return false;'><span
 				class="jh"></span>更多↓</a>
 		</div>
-		<div class="footer_mod">
-			<p>
-				<a target="_blank" href="http://dajia.qq.com/">首页</a>| <a
-					target="_blank" href="http://www.qq.com/">腾讯网</a>| <a
-					target="_blank" href="http://t.qq.com/">腾讯微博</a>| <a
-					target="_blank" href="http://v.qq.com/">腾讯视频</a>| <a
-					target="_blank" href="http://dajia.qq.com/rank">全部作者</a><br />
-				Copyright&nbsp;&copy;&nbsp;1998-2013&nbsp;Tencent.All&nbsp;Rights&nbsp;Reserved<br />
-				腾讯出品
-			</p>
-		</div>
+		<!-- footer -->
+		<#include "../model/footer_mod.html">
 
 	</div>
 	<!--Right-End-->
